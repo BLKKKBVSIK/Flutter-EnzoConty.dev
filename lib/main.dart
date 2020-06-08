@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_enzoconty/screens/screenList.dart';
 import 'package:flutter_enzoconty/widgets/buttonTabs.dart';
-//import 'dart:html' as html;
+import 'dart:html' as html;
 
 void main() {
   runApp(MyApp());
@@ -57,29 +57,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
-
-              /*
-              Text("Enzo CONTY"),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 200),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            createTabs("About", 0),
-                            createTabs("Hobbies", 1),
-                            createTabs("Experience", 2),
-                            createTabs("Contact", 3),
-                            createTabs("Skills", 4),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-
-              */
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -163,7 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           InkWell(
                               onTap: () {
-                                //html.window.open("https://creativecommons.org/licenses/by-nc-sa/4.0/","Licensing");
+                                html.window.open("https://creativecommons.org/licenses/by-nc-sa/4.0/","Licensing");
                               },
                               child: Text("CC BY NC SA 4.0.",
                                   style: TextStyle(
