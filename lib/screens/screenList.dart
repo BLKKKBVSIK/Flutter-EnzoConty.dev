@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_enzoconty/screens/aboutScreen.dart';
 
-List<Container> screenList = [
-  Container(
-    width: 500,
-    height: 900,
-    color: Colors.yellow,
-  ),
+List<Widget> screenList = [
+  AboutScreen(),
   Container(
     width: 500,
     height: 900,
