@@ -27,7 +27,7 @@ class _ButtonTabsState extends State<ButtonTabs> {
           color: widget.isSelected ? selectedColor : Colors.transparent,
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(5), topRight: Radius.circular(5))),
-      child: Center(child: Text(widget.title)),
+      child: Center(child: Text(widget.title, style: TextStyle(color: widget.isSelected ? Colors.blueAccent : Colors.white, fontFamily: 'IndieFlower'),)),
     );
   }
 }
