@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_enzoconty/widgets/enjoyBlock.dart';
 import 'package:flutter_enzoconty/widgets/githubResume.dart';
 import 'package:flutter_enzoconty/widgets/introduce.dart';
+import 'package:flutter_enzoconty/widgets/skillsBlock.dart';
 
 class AboutScreen extends StatelessWidget {
   @override
@@ -20,30 +22,31 @@ class AboutScreen extends StatelessWidget {
             padding: EdgeInsets.symmetric(
                 horizontal: containerSize * 0.1, vertical: 48),
             color: Colors.white,
-            child: Row(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Column(
+                Row(
                   children: [
-                    Introduce(containerSize * 0.50),
-                    GithubResume(containerSize * 0.50),
-                    Container(
-                      height: 300,
-                      width: containerSize * 0.50,
-                      color: Colors.purple,
-                    )
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Introduce(containerSize * 0.50),
+                        GithubResume(containerSize * 0.50),
+                      ],
+                    ),
+                    Flexible(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          SkillsBlock(
+                          )
+                        ],
+                      ),
+                    ),
                   ],
                 ),
-                Flexible(
-                  child: Column(
-                    children: [
-                      Container(
-                        height: 600,
-                        width: containerSize * 0.30,
-                        color: Colors.red,
-                      )
-                    ],
-                  ),
-                )
+                EnjoyBlock(),
               ],
             ),
           );
