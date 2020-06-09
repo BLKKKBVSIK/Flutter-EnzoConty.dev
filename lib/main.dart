@@ -57,29 +57,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
-
-              /*
-              Text("Enzo CONTY"),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 200),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            createTabs("About", 0),
-                            createTabs("Hobbies", 1),
-                            createTabs("Experience", 2),
-                            createTabs("Contact", 3),
-                            createTabs("Skills", 4),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-
-              */
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -116,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Container(
                     child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 200),
+                      padding: EdgeInsets.symmetric(horizontal: 150),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
