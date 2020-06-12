@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_enzoconty/misc/kColors.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'dart:html' as html;
+
+import 'package:websafe_svg/websafe_svg.dart';
 
 class GithubResume extends StatefulWidget {
   double width;
@@ -63,12 +64,7 @@ Widget githubBlock(double width) {
                 children: [
                   Padding(
                     padding: EdgeInsets.only(bottom: 25.0),
-                    child: SvgPicture.asset(
-                      "assets/icons/github-original-wordmark.svg",
-                      semanticsLabel: 'Acme Logo',
-                      color: Colors.white,
-                      height: 80.0,
-                    ),
+                    child: WebsafeSvg.asset('assets/icons/github-original-wordmark.svg', color: Colors.white, height: 80.0)
                   ),
                   RaisedButton(
                     padding:
