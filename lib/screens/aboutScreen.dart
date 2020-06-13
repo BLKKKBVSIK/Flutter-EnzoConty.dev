@@ -39,8 +39,7 @@ class AboutScreen extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          SkillsBlock(
-                          )
+                          SkillsBlock(),
                         ],
                       ),
                     ),
