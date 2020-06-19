@@ -22,6 +22,7 @@ class _ButtonTabsState extends State<ButtonTabs> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 40,
       padding: EdgeInsets.symmetric(horizontal: 35.0, vertical: 10.0),
       decoration: BoxDecoration(
           color: widget.isSelected ? selectedColor : Colors.transparent,
