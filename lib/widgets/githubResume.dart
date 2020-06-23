@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_enzoconty/misc/kColors.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-// import 'dart:html' as html;
+import 'dart:html' as html;
 
 import 'package:websafe_svg/websafe_svg.dart';
 
@@ -70,7 +70,7 @@ Widget githubBlock(double width) {
                     padding:
                         EdgeInsets.symmetric(horizontal: 12.0, vertical: 18.0),
                     onPressed: () {
-                      //html.window.open("https://github.com/BLKKKBVSIK","Github");
+                      html.window.open("https://github.com/BLKKKBVSIK","Github");
                     },
                     color: kBlue,
                     child: Text(
@@ -126,7 +126,7 @@ Widget resumeBlock(double width) {
                     padding:
                         EdgeInsets.symmetric(horizontal: 12.0, vertical: 18.0),
                     onPressed: () {
-                      //html.window.open("https://enzoconty.dev/.documents/ENCV.pdf","Resume");
+                      html.window.open("https://enzoconty.dev/.documents/ENCV.pdf","Resume");
                     },
                     color: kBlue,
                     child: Text(
