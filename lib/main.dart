@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_enzoconty/screens/screenList.dart';
 import 'package:flutter_enzoconty/widgets/buttonTabs.dart';
 import 'package:provider/provider.dart';
-//import 'dart:html' as html;
+import 'dart:html' as html;
 
 void main() {
   runApp(MyApp());
@@ -141,7 +141,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           InkWell(
                               onTap: () {
-                                //html.window.open("https://creativecommons.org/licenses/by-nc-sa/4.0/","Licensing");
+                                html.window.open("https://creativecommons.org/licenses/by-nc-sa/4.0/","Licensing");
                               },
                               child: Text("CC BY NC SA 4.0.",
                                   style: TextStyle(
