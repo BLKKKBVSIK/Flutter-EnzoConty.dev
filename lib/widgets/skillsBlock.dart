@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_enzoconty/misc/kColors.dart';
+import 'package:provider/provider.dart';
 
 class SkillsBlock extends StatefulWidget {
 
@@ -10,6 +11,7 @@ class SkillsBlock extends StatefulWidget {
 class _SkillsBlockState extends State<SkillsBlock> {
   @override
   Widget build(BuildContext context) {
+
     return LayoutBuilder(
       builder: (context, constraints) {
         return Container(
@@ -58,7 +60,6 @@ class _SkillsBlockState extends State<SkillsBlock> {
                         ),
                         InkWell(
                           onTap: () {
-                            print(constraints.maxHeight);
                           },
                           child: Text(
                             "Click here to get the complete list",
