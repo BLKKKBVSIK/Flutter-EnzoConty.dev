@@ -41,78 +41,135 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: <Widget>[
-            Container(
-              height: 384.0,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: NetworkImage(
-                    "https://enzoconty.dev/img/hero-img.jpg",
+    return LayoutBuilder(builder: (context, constraints) {
+      if (constraints.maxWidth < 770) {
+        return Scaffold(
+          backgroundColor: Colors.white,
+          body: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                Container(
+                  height: 184.0,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: NetworkImage(
+                        "https://enzoconty.dev/img/hero-img.jpg",
+                      ),
+                    ),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: Container(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Container(
+                                    child: Column(
+                                      children: [
+                                        Text(
+                                          "Enzo CONTY",
+                                          style: TextStyle(
+                                              fontSize: 32.0,
+                                              color: Colors.white),
+                                        ),
+                                        Text(
+                                          "  Full Stack Developer",
+                                          style: TextStyle(
+                                              fontSize: 21.0,
+                                              color: Colors.white),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(),
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 15),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              createTabs("About", 0),
+                              createTabs("Hobbies", 1),
+                              createTabs("Experience", 2),
+                              createTabs("Contact", 3),
+                              createTabs("Skills", 4),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Expanded(
-                    child: Container(
+                screenList[selectedIndex],
+                Stack(
+                  children: [
+                    Container(
+                      height: 384.0,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: NetworkImage(
+                            "https://enzoconty.dev/img/medusa.jpg",
+                          ),
+                        ),
+                      ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
+                          Text(
+                            "Website and background by Enzo CONTY",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 18.0),
+                          ),
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Container(
-                                child: Column(
-                                  children: [
-                                    Text(
-                                      "Enzo CONTY",
-                                      style: TextStyle(
-                                          fontSize: 32.0, color: Colors.white),
-                                    ),
-                                    Text(
-                                      "  Full Stack Developer",
-                                      style: TextStyle(
-                                          fontSize: 21.0, color: Colors.white),
-                                    ),
-                                  ],
-                                ),
+                              Text(
+                                "The website content is licensed ",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 18.0),
                               ),
-                              Container(),
+                              InkWell(
+                                  onTap: () {
+                                    //html.window.open("https://creativecommons.org/licenses/by-nc-sa/4.0/","Licensing");
+                                  },
+                                  child: Text("CC BY NC SA 4.0.",
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 18.0)))
                             ],
-                          )
+                          ),
                         ],
                       ),
-                    ),
-                  ),
-                  Container(
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 150),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          createTabs("About", 0),
-                          createTabs("Hobbies", 1),
-                          createTabs("Experience", 2),
-                          createTabs("Contact", 3),
-                          createTabs("Skills", 4),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+                    )
+                  ],
+                )
+              ],
             ),
-            screenList[selectedIndex],
-            Stack(
-              children: [
+          ),
+        );
+      } else {
+        return Scaffold(
+          backgroundColor: Colors.white,
+          body: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
                 Container(
                   height: 384.0,
                   width: double.infinity,
@@ -120,43 +177,115 @@ class _MyHomePageState extends State<MyHomePage> {
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: NetworkImage(
-                        "https://enzoconty.dev/img/medusa.jpg",
+                        "https://enzoconty.dev/img/hero-img.jpg",
                       ),
                     ),
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        "Website and background by Enzo CONTY",
-                        style: TextStyle(color: Colors.white, fontSize: 18.0),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "The website content is licensed ",
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 18.0),
+                      Expanded(
+                        child: Container(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Container(
+                                    child: Column(
+                                      children: [
+                                        Text(
+                                          "Enzo CONTY",
+                                          style: TextStyle(
+                                              fontSize: 32.0,
+                                              color: Colors.white),
+                                        ),
+                                        Text(
+                                          "  Full Stack Developer",
+                                          style: TextStyle(
+                                              fontSize: 21.0,
+                                              color: Colors.white),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(),
+                                ],
+                              )
+                            ],
                           ),
-                          InkWell(
-                              onTap: () {
-                                //html.window.open("https://creativecommons.org/licenses/by-nc-sa/4.0/","Licensing");
-                              },
-                              child: Text("CC BY NC SA 4.0.",
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 18.0)))
-                        ],
+                        ),
+                      ),
+                      Container(
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 150),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              createTabs("About", 0),
+                              createTabs("Hobbies", 1),
+                              createTabs("Experience", 2),
+                              createTabs("Contact", 3),
+                              createTabs("Skills", 4),
+                            ],
+                          ),
+                        ),
                       ),
                     ],
                   ),
+                ),
+                screenList[selectedIndex],
+                Stack(
+                  children: [
+                    Container(
+                      height: 384.0,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: NetworkImage(
+                            "https://enzoconty.dev/img/medusa.jpg",
+                          ),
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Website and background by Enzo CONTY",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 18.0),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "The website content is licensed ",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 18.0),
+                              ),
+                              InkWell(
+                                  onTap: () {
+                                    //html.window.open("https://creativecommons.org/licenses/by-nc-sa/4.0/","Licensing");
+                                  },
+                                  child: Text("CC BY NC SA 4.0.",
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 18.0)))
+                            ],
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
                 )
               ],
-            )
-          ],
-        ),
-      ),
-    );
+            ),
+          ),
+        );
+      }
+    });
   }
 
   Widget createTabs(String title, int tab) {
