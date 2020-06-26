@@ -13,9 +13,19 @@ class AboutScreen extends StatelessWidget {
       builder: (context, constraints) {
         if (constraints.maxWidth < 770) {
           return Container(
-            width: 600,
-            height: 900,
-            color: Colors.blue,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: Column(
+                children: [
+                  Introduce(containerSize * 2),
+                  githubBlock(containerSize * 2.5), // TODO: Meh, weak tweak.
+                  resumeBlock(containerSize * 2.5), // TODO: Meh, weak tweak.
+                  SkillsBlock(),
+                  EnjoyBlock(),
+
+                ],
+              ),
+            ),
           );
         } else {
           return Container(

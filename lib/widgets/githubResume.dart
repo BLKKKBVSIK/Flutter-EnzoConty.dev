@@ -63,9 +63,11 @@ Widget githubBlock(double width) {
                   child: Column(
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(bottom: 25.0),
-                    child: WebsafeSvg.asset('assets/icons/github-original-wordmark.svg', color: Colors.white, height: 80.0)
-                  ),
+                      padding: EdgeInsets.only(bottom: 25.0),
+                      child: WebsafeSvg.asset(
+                          'assets/icons/github-original-wordmark.svg',
+                          color: Colors.white,
+                          height: 80.0)),
                   RaisedButton(
                     padding:
                         EdgeInsets.symmetric(horizontal: 12.0, vertical: 18.0),
@@ -103,9 +105,11 @@ Widget resumeBlock(double width) {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                "My resume",
-                style: TextStyle(color: Colors.white, fontSize: 32.0),
+              FittedBox(
+                child: Text(
+                  "My resume",
+                  style: TextStyle(color: Colors.white, fontSize: 32.0),
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20.0),
