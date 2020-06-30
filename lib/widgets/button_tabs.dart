@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class ButtonTabs extends StatefulWidget {
-  String title;
-  bool isSelected;
+  final String title;
+  final bool isSelected;
 
-  ButtonTabs(this.title, this.isSelected);
+  const ButtonTabs(this.title, this.isSelected);
 
   @override
   _ButtonTabsState createState() => _ButtonTabsState();
@@ -23,10 +23,10 @@ class _ButtonTabsState extends State<ButtonTabs> {
   Widget build(BuildContext context) {
     return Container(
       height: 40,
-      padding: EdgeInsets.symmetric(horizontal: 35.0, vertical: 10.0),
+      padding: const EdgeInsets.symmetric(horizontal: 35.0, vertical: 10.0),
       decoration: BoxDecoration(
           color: widget.isSelected ? selectedColor : Colors.transparent,
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(5), topRight: Radius.circular(5))),
       child: Center(
           child: FittedBox(

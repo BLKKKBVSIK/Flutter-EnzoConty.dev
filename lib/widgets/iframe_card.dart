@@ -29,6 +29,7 @@ class _IframeCardState extends State<IframeCard> {
     _iframeElement.height = '500';
     _iframeElement.width = '500';
 
+    // ignore: unsafe_html
     _iframeElement.src = widget.url;
     _iframeElement.style.border = 'none';
 
@@ -57,10 +58,9 @@ class _IframeCardState extends State<IframeCard> {
             ),
             Container(
               width: 500,
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 24.0),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(widget.firstLine),
                   Text(widget.secondLine),

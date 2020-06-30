@@ -1,9 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_enzoconty/screens/screenList.dart';
-import 'package:flutter_enzoconty/widgets/buttonTabs.dart';
-import 'package:provider/provider.dart';
-import 'dart:html' as html;
+import 'package:flutter_enzoconty/widgets/button_tabs.dart';
 
 void main() {
   runApp(MyApp());
@@ -52,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   height: 184.0,
                   width: double.infinity,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: NetworkImage(
@@ -64,52 +62,43 @@ class _MyHomePageState extends State<MyHomePage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Expanded(
-                        child: Container(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  Container(
-                                    child: Column(
-                                      children: [
-                                        Text(
-                                          "Enzo CONTY",
-                                          style: TextStyle(
-                                              fontSize: 32.0,
-                                              color: Colors.white),
-                                        ),
-                                        Text(
-                                          "  Full Stack Developer",
-                                          style: TextStyle(
-                                              fontSize: 21.0,
-                                              color: Colors.white),
-                                        ),
-                                      ],
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Column(
+                                  children: [
+                                    const Text(
+                                      "Enzo CONTY",
+                                      style: TextStyle(
+                                          fontSize: 32.0, color: Colors.white),
                                     ),
-                                  ),
-                                  Container(),
-                                ],
-                              )
-                            ],
-                          ),
+                                    const Text(
+                                      "  Full Stack Developer",
+                                      style: TextStyle(
+                                          fontSize: 21.0, color: Colors.white),
+                                    ),
+                                  ],
+                                ),
+                                Container(),
+                              ],
+                            )
+                          ],
                         ),
                       ),
-                      Container(
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 15),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              createTabs("About", 0),
-                              createTabs("Hobbies", 1),
-                              createTabs("Experience", 2),
-                              createTabs("Contact", 3),
-                              createTabs("Skills", 4),
-                            ],
-                          ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            createTabs("About", 0),
+                            createTabs("Hobbies", 1),
+                            createTabs("Experience", 2),
+                            createTabs("Contact", 3),
+                            createTabs("Skills", 4),
+                          ],
                         ),
                       ),
                     ],
@@ -121,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Container(
                       height: 384.0,
                       width: double.infinity,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         image: DecorationImage(
                           fit: BoxFit.cover,
                           image: NetworkImage(
@@ -132,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
+                          const Text(
                             "Website and background by Enzo CONTY",
                             style:
                                 TextStyle(color: Colors.white, fontSize: 18.0),
@@ -140,7 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text(
+                              const Text(
                                 "The website content is licensed ",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 18.0),
@@ -149,7 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   onTap: () {
                                     //html.window.open("https://creativecommons.org/licenses/by-nc-sa/4.0/","Licensing");
                                   },
-                                  child: Text("CC BY NC SA 4.0.",
+                                  child: const Text("CC BY NC SA 4.0.",
                                       style: TextStyle(
                                           color: Colors.white, fontSize: 18.0)))
                             ],
@@ -173,7 +162,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   height: 384.0,
                   width: double.infinity,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: NetworkImage(
@@ -185,52 +174,43 @@ class _MyHomePageState extends State<MyHomePage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Expanded(
-                        child: Container(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  Container(
-                                    child: Column(
-                                      children: [
-                                        Text(
-                                          "Enzo CONTY",
-                                          style: TextStyle(
-                                              fontSize: 32.0,
-                                              color: Colors.white),
-                                        ),
-                                        Text(
-                                          "  Full Stack Developer",
-                                          style: TextStyle(
-                                              fontSize: 21.0,
-                                              color: Colors.white),
-                                        ),
-                                      ],
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Column(
+                                  children: [
+                                    const Text(
+                                      "Enzo CONTY",
+                                      style: TextStyle(
+                                          fontSize: 32.0, color: Colors.white),
                                     ),
-                                  ),
-                                  Container(),
-                                ],
-                              )
-                            ],
-                          ),
+                                    const Text(
+                                      "  Full Stack Developer",
+                                      style: TextStyle(
+                                          fontSize: 21.0, color: Colors.white),
+                                    ),
+                                  ],
+                                ),
+                                Container(),
+                              ],
+                            )
+                          ],
                         ),
                       ),
-                      Container(
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 150),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              createTabs("About", 0),
-                              createTabs("Hobbies", 1),
-                              createTabs("Experience", 2),
-                              createTabs("Contact", 3),
-                              createTabs("Skills", 4),
-                            ],
-                          ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 150),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            createTabs("About", 0),
+                            createTabs("Hobbies", 1),
+                            createTabs("Experience", 2),
+                            createTabs("Contact", 3),
+                            createTabs("Skills", 4),
+                          ],
                         ),
                       ),
                     ],
@@ -242,7 +222,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Container(
                       height: 384.0,
                       width: double.infinity,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         image: DecorationImage(
                           fit: BoxFit.cover,
                           image: NetworkImage(
@@ -253,7 +233,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
+                          const Text(
                             "Website and background by Enzo CONTY",
                             style:
                                 TextStyle(color: Colors.white, fontSize: 18.0),
@@ -261,7 +241,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text(
+                              const Text(
                                 "The website content is licensed ",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 18.0),
@@ -270,7 +250,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   onTap: () {
                                     //html.window.open("https://creativecommons.org/licenses/by-nc-sa/4.0/","Licensing");
                                   },
-                                  child: Text("CC BY NC SA 4.0.",
+                                  child: const Text("CC BY NC SA 4.0.",
                                       style: TextStyle(
                                           color: Colors.white, fontSize: 18.0)))
                             ],
@@ -289,7 +269,8 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget createTabs(String title, int tab) {
-    bool isSelected = selectedIndex == tab ? true : false;
+    // ignore: avoid_bool_literals_in_conditional_expressions
+    final bool isSelected = selectedIndex == tab ? true : false;
 
     return Expanded(
       child: InkWell(

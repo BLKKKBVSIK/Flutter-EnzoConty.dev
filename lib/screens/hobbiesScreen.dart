@@ -1,6 +1,6 @@
 import 'dart:html';
 import 'package:flutter/material.dart';
-import 'package:flutter_enzoconty/widgets/iframeCard.dart';
+import 'package:flutter_enzoconty/widgets/iframe_card.dart';
 import 'dart:ui' as ui;
 
 class HobbiesScreen extends StatelessWidget {
@@ -21,14 +21,12 @@ class HobbiesScreen extends StatelessWidget {
               color: Colors.white,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   FittedBox(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        IframeCard(
+                        const IframeCard(
                             "tracktvFrame",
                             "https://widgets.trakt.tv/users/4b9a65aa470984709b128e582d6270e5/profile/card",
                             "Movies, TV Shows, Anime",
@@ -62,8 +60,8 @@ class HobbiesScreen extends StatelessWidget {
                           width: constraints.maxWidth,
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
+                      const Padding(
+                        padding: EdgeInsets.symmetric(
                             horizontal: 24.0, vertical: 24.0),
                         child: Text(
                           "AND",
@@ -82,9 +80,8 @@ class HobbiesScreen extends StatelessWidget {
                   FittedBox(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        IframeCard(
+                        const IframeCard(
                             "spotifyFrame",
                             "https://open.spotify.com/embed?uri=spotify%3Aplaylist%3A4EbONo5HSbBnQ8KUpIxtMU",
                             "Music",

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_enzoconty/widgets/enjoyBlock.dart';
-import 'package:flutter_enzoconty/widgets/githubResume.dart';
+import 'package:flutter_enzoconty/widgets/enjoy_block.dart';
+import 'package:flutter_enzoconty/widgets/github_resume.dart';
 import 'package:flutter_enzoconty/widgets/introduce.dart';
-import 'package:flutter_enzoconty/widgets/skillsBlock.dart';
+import 'package:flutter_enzoconty/widgets/skills_block.dart';
 
 class AboutScreen extends StatelessWidget {
   @override

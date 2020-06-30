@@ -11,13 +11,14 @@ class EnjoyBlock extends StatelessWidget {
         children: [
           Container(
             width: double.infinity,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: kBlue,
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(5), topRight: Radius.circular(5)),
             ),
-            padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
-            child: Text(
+            padding:
+                const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
+            child: const Text(
               "3 things I do enjoy in my jobs:",
               style:
                   TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
@@ -25,52 +26,51 @@ class EnjoyBlock extends StatelessWidget {
           ),
           Container(
             width: double.infinity,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 color: kWhitishBlue,
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(5),
                     bottomRight: Radius.circular(5))),
-            padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 RichText(
-                    text: TextSpan(
+                    text: const TextSpan(
                         style: TextStyle(color: kDarkerBlue, fontSize: 16),
                         children: <TextSpan>[
-                      const TextSpan(
+                      TextSpan(
                           text:
                               '\u2022 What I love the most, of course, is being '),
-                      const TextSpan(
+                      TextSpan(
                         text: 'wrong',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      const TextSpan(
+                      TextSpan(
                           text: ', learning why, and improving from that.\n'),
                     ])),
                 RichText(
-                  text: TextSpan(
+                  text: const TextSpan(
                       style: TextStyle(color: kDarkerBlue, fontSize: 16),
                       children: [
-                        const TextSpan(
-                            text: '\u2022 Work on complex problems and '),
-                        const TextSpan(
+                        TextSpan(text: '\u2022 Work on complex problems and '),
+                        TextSpan(
                           text: 'solve new challenges.\n',
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ]),
                 ),
                 RichText(
-                  text: TextSpan(
+                  text: const TextSpan(
                       style: TextStyle(color: kDarkerBlue, fontSize: 16),
                       children: [
-                        const TextSpan(text: '\u2022'),
-                        const TextSpan(
+                        TextSpan(text: '\u2022'),
+                        TextSpan(
                           text: ' Creating the best content possible',
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
-                        const TextSpan(
-                          text: ' by putting myself in the user\'s shoes.',
+                        TextSpan(
+                          text: " by putting myself in the user\'s shoes.",
                         ),
                       ]),
                 )
