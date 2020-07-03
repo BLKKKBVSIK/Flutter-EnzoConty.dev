@@ -1,7 +1,7 @@
+// ignore: avoid_web_libraries_in_flutter
 import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:flutter_enzoconty/widgets/iframe_card.dart';
-import 'dart:ui' as ui;
 
 class HobbiesScreen extends StatelessWidget {
   @override
@@ -42,7 +42,7 @@ class HobbiesScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        IframeCard(
+                        const IframeCard(
                             "instaFrame",
                             "https://www.instagram.com/p/BqA6fcql3sR/embed/",
                             "Photography",

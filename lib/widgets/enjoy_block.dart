@@ -70,7 +70,7 @@ class EnjoyBlock extends StatelessWidget {
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                         TextSpan(
-                          text: " by putting myself in the user\'s shoes.",
+                          text: " by putting myself in the user's shoes.",
                         ),
                       ]),
                 )

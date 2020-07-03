@@ -4,7 +4,7 @@ class ButtonTabs extends StatefulWidget {
   final String title;
   final bool isSelected;
 
-  const ButtonTabs(this.title, this.isSelected);
+  const ButtonTabs({this.title, this.isSelected});
 
   @override
   _ButtonTabsState createState() => _ButtonTabsState();

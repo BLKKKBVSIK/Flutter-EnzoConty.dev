@@ -1,7 +1,8 @@
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:html' as html;
 import 'package:flutter/material.dart';
 import 'package:flutter_enzoconty/misc/kColors.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'dart:html' as html;
 
 import 'package:websafe_svg/websafe_svg.dart';
 

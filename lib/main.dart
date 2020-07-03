@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_enzoconty/screens/screenList.dart';
+import 'package:flutter_enzoconty/screens/screen_list.dart';
 import 'package:flutter_enzoconty/widgets/button_tabs.dart';
 
 void main() {
@@ -17,13 +17,13 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key}) : super(key: key);
+  const MyHomePage({Key key}) : super(key: key);
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -69,13 +69,13 @@ class _MyHomePageState extends State<MyHomePage> {
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 Column(
-                                  children: [
-                                    const Text(
+                                  children: const [
+                                    Text(
                                       "Enzo CONTY",
                                       style: TextStyle(
                                           fontSize: 32.0, color: Colors.white),
                                     ),
-                                    const Text(
+                                    Text(
                                       "  Full Stack Developer",
                                       style: TextStyle(
                                           fontSize: 21.0, color: Colors.white),
@@ -181,13 +181,13 @@ class _MyHomePageState extends State<MyHomePage> {
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 Column(
-                                  children: [
-                                    const Text(
+                                  children: const [
+                                    Text(
                                       "Enzo CONTY",
                                       style: TextStyle(
                                           fontSize: 32.0, color: Colors.white),
                                     ),
-                                    const Text(
+                                    Text(
                                       "  Full Stack Developer",
                                       style: TextStyle(
                                           fontSize: 21.0, color: Colors.white),
@@ -279,7 +279,10 @@ class _MyHomePageState extends State<MyHomePage> {
             selectedIndex = tab;
           });
         },
-        child: ButtonTabs(title, isSelected),
+        child: ButtonTabs(
+          title: title,
+          isSelected: isSelected,
+        ),
       ),
     );
   }
