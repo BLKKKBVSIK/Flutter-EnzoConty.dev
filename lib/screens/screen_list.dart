@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_enzoconty/screens/aboutScreen.dart';
-import 'package:flutter_enzoconty/screens/hobbiesScreen.dart';
+import 'package:flutter_enzoconty/screens/about_screen.dart';
+import 'package:flutter_enzoconty/screens/hobbies_screen.dart';
 
 List<Widget> screenList = [
   AboutScreen(),
