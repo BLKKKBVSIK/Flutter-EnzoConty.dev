@@ -1,6 +1,7 @@
 // ignore: avoid_web_libraries_in_flutter
-import 'dart:html';
 import 'dart:ui' as ui;
+import 'package:flutter/foundation.dart';
+import 'package:universal_html/html.dart' as html;
 import 'package:flutter/material.dart';
 
 class IframeCard extends StatefulWidget {
@@ -10,7 +11,8 @@ class IframeCard extends StatefulWidget {
   final String thirdLine;
   final String frameName;
 
-  const IframeCard(this.frameName, this.url, this.firstLine, this.secondLine, this.thirdLine,
+  const IframeCard(
+      this.frameName, this.url, this.firstLine, this.secondLine, this.thirdLine,
       {Key key})
       : super(key: key);
 
@@ -21,7 +23,7 @@ class IframeCard extends StatefulWidget {
 class _IframeCardState extends State<IframeCard> {
   Widget _iframeWidget;
 
-  final IFrameElement _iframeElement = IFrameElement();
+  final html.IFrameElement _iframeElement = html.IFrameElement();
 
   @override
   void initState() {
@@ -35,10 +37,10 @@ class _IframeCardState extends State<IframeCard> {
     _iframeElement.style.border = 'none';
 
     // ignore: undefined_prefixed_name
-    ui.platformViewRegistry.registerViewFactory(
-      widget.frameName,
-      (int viewId) => _iframeElement,
-    );
+    /* ui.platformViewRegistry.registerViewFactory(
+        widget.frameName,
+        (int viewId) => _iframeElement,
+      ); */
 
     _iframeWidget = HtmlElementView(
       key: UniqueKey(),
@@ -59,7 +61,8 @@ class _IframeCardState extends State<IframeCard> {
             ),
             Container(
               width: 500,
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 20, vertical: 24.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

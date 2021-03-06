@@ -1,7 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_enzoconty/screens/screen_list.dart';
-import 'package:flutter_enzoconty/widgets/button_tabs.dart';
+import 'package:flutter_enzoconty/ui/screens/screen_list.dart';
+import 'package:flutter_enzoconty/ui/widgets/button_tabs.dart';
+import 'dart:ui' as ui;
 
 void main() {
   runApp(MyApp());
@@ -53,8 +54,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   decoration: const BoxDecoration(
                     image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: NetworkImage(
-                        "https://enzoconty.dev/img/hero-img.jpg",
+                      image: AssetImage(
+                        "assets/images/hero-img.jpg",
                       ),
                     ),
                   ),
@@ -113,8 +114,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       decoration: const BoxDecoration(
                         image: DecorationImage(
                           fit: BoxFit.cover,
-                          image: NetworkImage(
-                            "https://enzoconty.dev/img/medusa.jpg",
+                          image: AssetImage(
+                            "assets/images/medusa.jpg",
                           ),
                         ),
                       ),
@@ -165,8 +166,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   decoration: const BoxDecoration(
                     image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: NetworkImage(
-                        "https://enzoconty.dev/img/hero-img.jpg",
+                      image: AssetImage(
+                        "assets/images/hero-img.jpg",
                       ),
                     ),
                   ),
@@ -225,8 +226,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       decoration: const BoxDecoration(
                         image: DecorationImage(
                           fit: BoxFit.cover,
-                          image: NetworkImage(
-                            "https://enzoconty.dev/img/medusa.jpg",
+                          image: AssetImage(
+                            "assets/images/medusa.jpg",
                           ),
                         ),
                       ),

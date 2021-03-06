@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_enzoconty/misc/kColors.dart';
+import 'package:flutter_enzoconty/misc/k_colors.dart';
 
 class EnjoyBlock extends StatelessWidget {
   @override

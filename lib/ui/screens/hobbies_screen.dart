@@ -1,7 +1,7 @@
 // ignore: avoid_web_libraries_in_flutter
-import 'dart:html';
+import 'package:universal_html/html.dart' as html;
 import 'package:flutter/material.dart';
-import 'package:flutter_enzoconty/widgets/iframe_card.dart';
+import 'package:flutter_enzoconty/ui/widgets/iframe_card.dart';
 
 class HobbiesScreen extends StatelessWidget {
   @override

@@ -1,10 +1,9 @@
 // ignore: avoid_web_libraries_in_flutter
-import 'dart:html' as html;
+import 'package:flutter_svg/svg.dart';
+import 'package:universal_html/html.dart' as html;
 import 'package:flutter/material.dart';
-import 'package:flutter_enzoconty/misc/kColors.dart';
+import 'package:flutter_enzoconty/misc/k_colors.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-import 'package:websafe_svg/websafe_svg.dart';
 
 class GithubResume extends StatefulWidget {
   final double width;
@@ -35,8 +34,8 @@ Widget githubBlock(double width) {
       decoration: const BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: NetworkImage(
-            "https://enzoconty.dev/img/medusade.jpg",
+          image: AssetImage(
+            "assets/images/medusade.jpg",
           ),
         ),
         borderRadius: BorderRadius.all(Radius.circular(5)),
@@ -61,11 +60,12 @@ Widget githubBlock(double width) {
                 child: Column(
               children: [
                 Padding(
-                    padding: const EdgeInsets.only(bottom: 25.0),
-                    child: WebsafeSvg.asset(
-                        'assets/icons/github-original-wordmark.svg',
-                        color: Colors.white,
-                        height: 80.0)),
+                  padding: const EdgeInsets.only(bottom: 25.0),
+                  child: SvgPicture.asset(
+                      'assets/icons/github-original-wordmark.svg',
+                      color: Colors.white,
+                      height: 80.0),
+                ),
                 RaisedButton(
                   padding: const EdgeInsets.symmetric(
                       horizontal: 12.0, vertical: 18.0),
@@ -128,7 +128,7 @@ Widget resumeBlock(double width) {
                   onPressed: () {
                     // ignore: unsafe_html
                     html.window.open(
-                        "https://enzoconty.dev/.documents/ENCV.pdf", "Resume");
+                        "http://enzoconty.dev/.documents/ENCV.pdf", "Resume");
                   },
                   color: kBlue,
                   child: const Text(
