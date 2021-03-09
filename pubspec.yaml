@@ -73,6 +73,9 @@ flutter:
     - family: IndieFlower
       fonts:
         - asset: assets/IndieFlower-Regular.ttf
+    - family: SanFrancisco
+      fonts:
+        - asset: assets/System San Francisco Display Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
