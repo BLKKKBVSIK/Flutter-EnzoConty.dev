@@ -16,9 +16,9 @@ class AboutScreen extends StatelessWidget {
             padding: const EdgeInsets.only(top: 20),
             child: Column(
               children: [
-                Introduce(containerSize * 2),
-                githubBlock(containerSize * 2.5), // TODO: Meh, weak tweak.
-                resumeBlock(containerSize * 2.5), // TODO: Meh, weak tweak.
+                Introduce(),
+                githubBlock(),
+                resumeBlock(),
                 SkillsBlock(),
                 EnjoyBlock(),
               ],
@@ -27,28 +27,36 @@ class AboutScreen extends StatelessWidget {
         } else {
           return Container(
             padding: EdgeInsets.symmetric(
-                horizontal: containerSize * 0.1, vertical: 48),
+                horizontal: containerSize * .06, vertical: 40),
             color: Colors.white,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.max,
               children: [
-                Row(
-                  children: [
-                    Column(
-                      children: [
-                        Introduce(containerSize * 0.50),
-                        GithubResume(containerSize * 0.50),
-                      ],
-                    ),
-                    Flexible(
-                      child: Column(
-                        children: [
-                          SkillsBlock(),
-                        ],
+                IntrinsicHeight(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: MediaQuery.of(context).size.width * .58,
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Introduce(),
+                            GithubResume(),
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                      Container(
+                        width: MediaQuery.of(context).size.width * .30,
+                        child: Column(
+                          children: [
+                            Expanded(child: SkillsBlock()),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 EnjoyBlock(),
               ],
