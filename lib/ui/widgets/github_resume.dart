@@ -4,12 +4,9 @@ import 'package:universal_html/html.dart' as html;
 import 'package:flutter/material.dart';
 import 'package:flutter_enzoconty/misc/k_colors.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class GithubResume extends StatefulWidget {
-  final double width;
-
-  const GithubResume(this.width);
-
   @override
   _GithubResumeState createState() => _GithubResumeState();
 }
@@ -19,18 +16,17 @@ class _GithubResumeState extends State<GithubResume> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        githubBlock(widget.width),
-        resumeBlock(widget.width),
+        Flexible(child: githubBlock()),
+        Flexible(child: resumeBlock()),
       ],
     );
   }
 }
 
-Widget githubBlock(double width) {
+Widget githubBlock() {
   return Padding(
     padding: const EdgeInsets.all(12.0),
     child: Container(
-      width: width / 2 - 12,
       decoration: const BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.cover,
@@ -66,13 +62,14 @@ Widget githubBlock(double width) {
                       color: Colors.white,
                       height: 80.0),
                 ),
-                RaisedButton(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 12.0, vertical: 18.0),
-                  onPressed: () {
-                    html.window.open("https://github.com/BLKKKBVSIK", "Github");
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      primary: kBlue,
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 30, vertical: 20)),
+                  onPressed: () async {
+                    await launch("https://github.com/BLKKKBVSIK");
                   },
-                  color: kBlue,
                   child: const Text(
                     "View it",
                     style: TextStyle(color: Colors.white),
@@ -87,11 +84,10 @@ Widget githubBlock(double width) {
   );
 }
 
-Widget resumeBlock(double width) {
+Widget resumeBlock() {
   return Padding(
     padding: const EdgeInsets.all(12.0),
     child: Container(
-      width: width / 2 - 12,
       decoration: const BoxDecoration(
         color: kGreen,
         borderRadius: BorderRadius.all(Radius.circular(5)),
@@ -122,15 +118,14 @@ Widget resumeBlock(double width) {
                   child: FaIcon(FontAwesomeIcons.solidFile,
                       color: Colors.white, size: 80.0),
                 ),
-                RaisedButton(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 12.0, vertical: 18.0),
-                  onPressed: () {
-                    // ignore: unsafe_html
-                    html.window.open(
-                        "http://enzoconty.dev/.documents/ENCV.pdf", "Resume");
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      primary: kBlue,
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 30, vertical: 20)),
+                  onPressed: () async {
+                    await launch("https://enzoconty.dev/.documents/ENCV.pdf");
                   },
-                  color: kBlue,
                   child: const Text(
                     "Read it",
                     style: TextStyle(color: Colors.white),

@@ -23,20 +23,22 @@ class _ButtonTabsState extends State<ButtonTabs> {
   Widget build(BuildContext context) {
     return Container(
       height: 40,
-      padding: const EdgeInsets.symmetric(horizontal: 35.0, vertical: 10.0),
+      padding: const EdgeInsets.symmetric(vertical: 10.0),
       decoration: BoxDecoration(
           color: widget.isSelected ? selectedColor : Colors.transparent,
           borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(5), topRight: Radius.circular(5))),
-      child: Center(
-          child: FittedBox(
-        child: Text(
-          widget.title,
-          style: TextStyle(
-              color: widget.isSelected ? Colors.blueAccent : Colors.white,
-              fontFamily: 'IndieFlower'),
-        ),
-      )),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            widget.title,
+            style: TextStyle(
+                color: widget.isSelected ? Colors.blueAccent : Colors.white,
+                fontFamily: 'IndieFlower'),
+          ),
+        ],
+      ),
     );
   }
 }
