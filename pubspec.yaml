@@ -23,15 +23,23 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  # UI 
   font_awesome_flutter: ^8.8.1
-  universal_html: ^1.2.4
+  timelines: ^0.0.2+1
   cupertino_icons: ^0.1.3
   flutter_svg: ^0.19.3
+
+  # Utils
+  universal_html: ^1.2.4
+  url_launcher: ^6.0.2
+
+  # State Management
+  stacked: ^1.9.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  lint: ^1.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
